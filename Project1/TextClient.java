@@ -7,11 +7,15 @@ public class TextClient {
     try {
 
       while (true) {
+        // Make a connection to the server running on localhost at port 6013
         Socket sock = new Socket("127.0.0.1", 6013);
+
+        // Accept input from the user
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a message to send to the server: ");
         String userInput = scanner.nextLine();
 
+        // Send the user's input to the server
         PrintWriter pout = new PrintWriter(sock.getOutputStream(), true);
         pout.println(userInput);
 

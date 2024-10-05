@@ -1,0 +1,3 @@
+In the TextClient.java, I add a while loop to keep communicate with server and client and not disconnect the connection.
+In the TextServer.java, After the server receive the message from client, it will ask the user to communicate to the client. 
+So, I added a scanner to read from the user and modify the code so that it will send what user input.
